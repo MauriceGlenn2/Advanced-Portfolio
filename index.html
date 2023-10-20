@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maurice Glenn</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d291aecf1c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("cmoJvDUK808Fy3WFe");
+   })();
+</script>
   </head>
   <body>
     <section id="landing-page">
       <nav>
         <figure>
-          <img id = "personal-logo" src="./logo.svg" alt="" />
+          <img id="personal-logo" src="./logo.jpg" alt="" />
         </figure>
         <ul class="nav__link--list">
           <li class="nav__link">
@@ -34,10 +47,208 @@
               >Contact</a
             >
           </li>
+
+          <li class="nav__link click">
+            <i class="fa-sharp fa-solid fa-circle-half-stroke"></i>
+          </li>
         </ul>
       </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hey</h1>
+          <h1 class="title purple">I'm Maurice.</h1>
+          <p class="header__para">
+            I'm a <b class="purple">Frontend Software Engineer</b> with a strong
+            passion for building web applications with great user experiences.
+            <br />
+            Heres a bit more <b class="purple">about me</b>
+          </p>
+          <div class="social__list">
+            <a
+              href="https://www.linkedin.com/in/mauriceg2/"
+              target="_blank"
+              class="social__link click"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/MauriceGlenn2"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-github"></i
+            ></a>
+            <a href="./Resume.pdf" target="_blank" class="social__link click">
+              <i class="fa-solid fa-file-pdf"></i
+            ></a>
+          </div>
+        </div>
+      </header>
+      <button class="mail__btn click">
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+      <a href="#projects" class="scroll"
+        ><div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            Hello! I'm a 39-year-old aspiring
+            <span class="purple"><b> front-end engineer</b></span> with a deep
+            love for web design and user interfaces. My journey into the world
+            of coding may have started later in life, but it's a journey that
+            I'm incredibly
+            <span class="purple"> <b>passionate</b> </span> about. I believe in
+            the power of continuous
+            <span class="purple"> <b> learning </b> </span> and
+            <span class="purple"> <b>self-improvement.</b><br /></span>
+            As someone who appreciates both the artistry and functionality of
+            web design, I'm dedicated to honing my skills, staying up-to-date
+            with the latest industry trends, and pushing my creative boundaries.
+            I'm a firm believer that it's never too late to pursue your passions
+            and embark on new adventures.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" ></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" ></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" type="text" ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send it my way</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon!
+          </div>
+        </div>
+        <i class="fas fa-times modal__exit click"></i>
+      </div>
     </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="purple">projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./blinker mockup.png" class="project__img" alt="" />
+                <div class="project__wrapper--background"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Clone Of Treact</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, Javascript
+                  </h4>
+                  <p class="project__description--para">
+                    This project was created as a learning exercise to improve
+                    my HTML, CSS, and JavaScript skills. I replicated an
+                    existing website to gain practical experience and deepen my
+                    understanding of web development. You can find the website I
+                    replicated from in the GitHub link below.
+                  </p>
+                  <div class="project__descrption--links">
+                    <a
+                      href="#"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://week2-1-1scale.vercel.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure>
+            <img src="./logo.jpg" class="footer__logo--img" alt="" />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="https://github.com/MauriceGlenn2"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect-white"
+              >Github</a
+            >
+            <a
+              href="https://www.linkedin.com/in/mauriceg2/"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect-white"
+              >LinkedIn</a
+            >
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect-white"
+              >Email</a
+            >
+            <a
+              href="./Resume.pdf"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect-white"
+              >Resume</a
+            >
+          </div>
+          <div class="footer__copyright">Copyright © 2023 Maurice Glenn</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
-
-stopped at 11:43
