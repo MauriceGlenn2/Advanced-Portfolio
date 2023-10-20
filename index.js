@@ -2,6 +2,22 @@
 // serviceID: service_lxp6djj
 //public key: cmoJvDUK808Fy3WFe
 
+
+//Darkmode
+let contrastToggle = false
+
+function toggleContrast () {
+    contrastToggle = !contrastToggle
+    if (contrastToggle) {
+        document.body.classList += " dark-theme";
+    }
+    else{
+        document.body.classList.remove("dark-theme")
+    }
+}
+
+
+//Modal Toggle
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector('.modal__overlay--loading');
@@ -26,6 +42,29 @@ setTimeout(() =>{
 }, 1000)
 }
 
+let isModalOpen =false
 function toggleModal () {
+    if (isModalOpen){
+        isModalOpen = false
+        return document.body.classList.remove("modal--open")
+    }
     
+    document.body.classList += " modal--open"
+}
+
+//Background Shapes
+const scaleFactor = 1 / 20
+
+function moveBackground(event) {
+    //queryslectorall reutrns an array
+    const shapes = document.querySelectorAll('.shape')
+    const x = event.clientX * scaleFactor;
+    const y = event.clientY * scaleFactor;
+
+    for (let i = 0; i < shapes.length; i++) {
+        const isOdd = i % 2 !==0
+        const boolInt = isOdd ? -1 : 1
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+
+    }
 }
