@@ -1,7 +1,3 @@
-// templatID: template_ivhy4qi
-// serviceID: service_lxp6djj
-//public key: cmoJvDUK808Fy3WFe
-
 
 //Darkmode
 let contrastToggle = false
@@ -42,6 +38,7 @@ setTimeout(() =>{
 }, 1000)
 }
 
+//opening and closing modal
 let isModalOpen =false
 function toggleModal () {
     if (isModalOpen){

@@ -493,6 +493,9 @@ nav {
   z-index: 100;
 }
 /* Projects */
+.project--2{
+  padding-top: 20px;
+}
 
 .section__title {
   text-align: center;
