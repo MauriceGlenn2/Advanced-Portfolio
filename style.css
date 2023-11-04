@@ -576,7 +576,8 @@ footer {
   display: flex;
   padding: 6% 0;
   position: relative;
-  
+  padding: 0;
+
 }
 
 .footer__row {
