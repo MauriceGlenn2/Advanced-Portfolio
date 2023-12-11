@@ -686,6 +686,12 @@ Background Shapes
 
 /* small phones */
 @media(max-width:480px){
+  .section__title{
+    font-size: 32px;
+  }
+  .project__description--title{
+    font-size: 32px;
+  }
   .title{
     font-size: 52px;
   }
