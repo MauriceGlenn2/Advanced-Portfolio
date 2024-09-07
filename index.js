@@ -30,7 +30,7 @@ function contact(event) {
      success.classList += " modal__overlay--visible";
   }).catch(() =>{
     loading.classList.remove("modal__overlay--visible");
-    alert("The email service is temporarily unavailable. Please contact me directly at Mauriceglenn2@gmail.com")
+    alert("The email service is temporarily unavailable. Please contact me directly at Mauriceglenn2nd@gmail.com")
   })
 
 
@@ -65,3 +65,5 @@ function moveBackground(event) {
 
     }
 }
+
+
